@@ -1,0 +1,45 @@
+.hero1{
+  background: url(../assets/bg1.webp);
+  height: 90vh;
+  background-size: cover;
+   margin-top: 5%;
+  
+}
+.hero1_h1{
+ 
+  font-family: Queen, serif;
+  font-size: 70px;
+  font-weight: 500;
+  color: white;
+
+
+}
+.hero1_p{
+   font-family: Queen, serif;
+  font-size: 25px;
+  color: white;
+}
+.hero_left{
+    margin-top: 40px;
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+     gap: 40px;
+     & button{
+      background-color: black;
+        width: 350px;
+        height: 45px;
+        color: white;
+        border: none;
+     }
+        button:hover{
+          cursor: pointer;
+          background-color: aqua;
+          color: black;
+        }
+     
+   
+}
+
+
+

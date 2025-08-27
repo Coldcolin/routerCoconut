@@ -1,0 +1,141 @@
+.hero2{
+    display: flex;
+    justify-content: space-between;
+    width: 90vw;
+    height: 10vh;
+    padding: 40px;
+    align-items: center;
+    & img{
+        cursor: pointer;
+    }
+}
+.hero3{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    height: 100vh;
+    padding-bottom: 60px;
+    & button{
+      width: 400px;
+     padding: 17px;
+    background-color: black;
+     border: none;
+    color: white;
+    }
+     button:hover{
+        background-color: aqua;
+        cursor: pointer;
+        color: black;
+    }
+    }
+    
+
+.hero3_img{
+    display: flex;
+    gap: 20px ;
+    cursor: pointer;
+}
+.hero3_img_p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.hero3_h1{
+    margin: 40px 0 0px 0;
+    font-family: Queen,serif;
+    font-size: 50px;
+    font-weight: 100;
+}
+
+.hero4{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     gap: 40px;
+     background-color: black;
+     color: white;
+     padding-bottom: 40px;
+     padding-top: 40px;
+    
+
+}
+.hero4_btn{
+    width: 250px;
+    padding: 17px;
+    background-color: #72F2C7;
+    cursor: pointer;
+    color: rgb(43, 41, 41);
+    
+}
+.hero4_img{
+    display: flex;
+    gap: 30px;
+     
+    
+}
+.hero2_p{
+    font-size: 30px;
+    
+
+}
+
+.hero6{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    height: 100vh;
+    padding-bottom: 60px;
+    width: 100%;
+    & .hero6_img{
+        width: 100vw;
+        cursor: pointer;
+    } & .hero6_h1{
+        margin: 40px 0 0px 0;
+        font-family: Queen,serif;
+        font-size: 50px;
+        font-weight: 100;
+        
+    }
+}
+.hero7_wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
+}
+.hero7{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+     gap: 40px;
+    width: 90vw;
+    height: 70vh;
+    padding-bottom: 60px;
+    
+    & .hero3_img{
+        display: flex;
+       justify-content: center;
+    }
+    & .hero7_btn_image{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    cursor: pointer;
+    & button{
+    
+     padding: 17px;
+    background-color: black;
+    cursor: pointer;
+    color: white;
+    border: none;
+    }
+    button:hover{
+        background-color: #72F2C7;
+        color: white;
+
+    }
+}
+}  
+

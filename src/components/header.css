@@ -1,0 +1,57 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0 10px 0;
+    background: url("../assets/bg1.webp");
+    background-size: cover;
+     width: 100%;
+     position: fixed;
+     top: 0;
+    
+     
+}
+.header.Change{
+    background: white  !important;
+    color: black;
+}
+.icon1
+    {
+    display: flex;
+    align-items: center;
+     width: 30%;
+     margin-left: 30px;
+     
+} 
+.icon3
+{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: flex-end;
+    width: 30%;
+    margin-right: 30px;
+    
+} 
+.icon2{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: space-between;
+    width: 30%;
+    cursor: pointer;
+}
+input{
+    border: none;
+    outline: none;
+    padding: 5px 10px;
+    border-radius: 20px;
+    background-color: #f0f2f5;
+}
+.bite{
+    font-size: 13px;
+    font-weight: bold;
+    font-family: Queens, serif;
+    cursor: pointer;
+
+}
