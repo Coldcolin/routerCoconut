@@ -1,6 +1,6 @@
 .footer_container{
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: 70vh;
     background-color: #131313;
     justify-content: center;
@@ -9,6 +9,8 @@
 }
 .footer_container_wrapper{
     display: flex;
+    width: 100%;
+    max-width: 100vw;
     color: white;
      width: 90vw;
      height: 90%;

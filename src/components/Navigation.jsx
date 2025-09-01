@@ -1,9 +1,29 @@
-import React from 'react'
+import axios from "axios"
 import './Navigation.css'
 import Footer from './Footer'
 import Header from './header'
+import { useState, useEffect } from "react"
+
+
 export const Navigation = ({category}) => {
     const categories = ["ALL", "BEST SELLERS", "ORAL CARE", "BODY CARE", "SETS", "SUBSCRIBE AND SAVE"];
+    const [products, setProducts] = useState([])
+
+    const run= async()=>{
+      try{
+        const res = await axios.get("https://api.escuelajs.co/api/v1/products")
+        setProducts(res.data)
+        console.log(res.data)
+
+      }catch(err){
+        console.log(err)
+      }
+    }
+
+    useEffect(() => {
+      run()
+    }, []);
+
 
   return (
     <div> 
@@ -34,30 +54,23 @@ export const Navigation = ({category}) => {
           <div className='hero7'>
       
      
-        <div className='hero3_img' >
-                 <div className='hero7_btn_image'>
-                <img src="https://bitetoothpastebits.com/cdn/shop/files/pc-tpb-ff-4oz-mint-no-bg.webp?v=1702985943&width=550"width={300}  height={300}  />
-                <button>ADD TO BAG</button>
-                </div>
-                 <div className='hero7_btn_image'>
-                <img src="https://bitetoothpastebits.com/cdn/shop/files/pc-tpb-wf-2oz-mint-fluoride-no-bg.png?v=1701367239&width=550"width={300}  height={300}  />
-                <button>ADD TO BAG</button>
-                </div>
-                 <div className='hero7_btn_image'>
-                <img src="https://bitetoothpastebits.com/cdn/shop/files/pc-tpb-wf-2oz-mint-fluoride-no-bg.png?v=1701367239&width=550"width={300}  height={300}  />
-                <button>ADD TO BAG</button>
-                </div>
-                
-                <div className='hero7_btn_image'>
-                <img src="https://bitetoothpastebits.com/cdn/shop/files/pc-whitening-gel-no-bg.png?v=1701372643&width=550" width={300}  height={300} />
-                <button>ADD TO BAG</button>
-                </div>
-                </div>
-                </div>
-                </article>
+        <div className='prod_img' >
+                 
+                {
+                  products.map((item)=>(
+                    <div key={item.id} className='prod_card'>
+                      <h3 className="prod_title">{(item.title).toUpperCase()}</h3>
+                    <img src={item.images[0]} width={300}  height={300}  />
+                    <button className="prod_button">ADD TO BAG | ${item.price}</button>
+                    </div>
+                  ))
+                }
+        </div>
+        </div>
+        </article>
 
 
-          <article className='hero7_wrapper' style={{height:"330px",backgroundColor:" #F8F8F8"}}>
+          {/* <article className='hero7_wrapper' style={{height:"330px",backgroundColor:" #F8F8F8"}}>
 
           <div className='hero7'>
       
@@ -77,8 +90,8 @@ export const Navigation = ({category}) => {
                     
                 </div>
                 </div>
-                </article>
-                <Footer/>
+                </article> */}
+                {/* <Footer/> */}
     </div>
   )
 }
